@@ -20,7 +20,7 @@ jobs:
       - run:
           name: Deploy ssh
           command: |
-              echo 'ls && cd /home/pi/fireowls/webapps/ROOT && git pull' | ssh -o 'StrictHostKeyChecking no' ewok@florianchiraux.fr
+              echo 'ls' | ssh -o 'StrictHostKeyChecking no' ewok@florianchiraux.fr
 
 workflows:
     version: 2.1
