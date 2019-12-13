@@ -21,3 +21,9 @@ jobs:
         name: Deploy ssh
         command: |
           ssh ewok@florianchiraux.fr 'cd /home/pi/fireowls/webapps/ROOT && git pull'
+
+workflow:
+    version: 2.1
+    jobs:
+        - deploy
+        
