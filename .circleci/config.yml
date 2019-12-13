@@ -16,11 +16,11 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprints:
-              - "ea:5f:17:60:91:4b:e5:42:19:10:33:c7:ad:a1:5b:b6"
+              - "2048 MD5:ea:5f:17:60:91:4b:e5:42:19:10:33:c7:ad:a1:5b:b6 ewok@raspberrypi (RSA)"
       - run:
           name: Deploy ssh
           command: |
-              ssh -vv -o 'StrictHostKeyChecking no' ewok@florianchiraux.fr 'cd /home/pi/fireowls/webapps/ROOT && git pull'
+              ssh -o 'StrictHostKeyChecking no' ewok@florianchiraux.fr 'cd /home/pi/fireowls/webapps/ROOT && git pull'
 
 workflows:
     version: 2.1
