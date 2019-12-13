@@ -22,8 +22,9 @@ jobs:
         command: |
           ssh ewok@florianchiraux.fr 'cd /home/pi/fireowls/webapps/ROOT && git pull'
 
-workflow:
+workflows:
     version: 2.1
-    jobs:
-        - deploy
+    integration:
+        jobs:
+                - deploy
         
